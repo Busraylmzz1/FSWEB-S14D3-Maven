@@ -3,33 +3,37 @@ package org.example.company;
 import java.util.Objects;
 
 public class Car {
-    private boolean engine;
-    private int cylinders;
     private String name;
+
+    private int cylinders;
+    private boolean engine;
+
     private  int wheels;
 
 
     public Car (int cylinders, String name){
-        this.cylinders= cylinders;
         this.name= name;
-        this.engine = true; //static olarak aynı olması istediğimiz için default tanımlıyoruz.
+        this.cylinders= cylinders;
+        this.engine = Boolean.TRUE; //static olarak aynı olması istediğimiz için default tanımlıyoruz.
         this.wheels = 4; //static olarak aynı olması istediğimiz için default tanımlıyoruz.
+    }
+    public String accelerate() {
+        printSimpleName();
+        return "the car is accelerating";
+    }
+    public  String brake() {
+        printSimpleName();
+        return "the car is braking";
+
     }
 
     public String startEngine (){
-        System.out.println("Class Name:" + getClass().getSimpleName());
+        printSimpleName();
         return "the car's engine is starting";
     }
-
-    public String accelerate() {
+    public void printSimpleName(){
         System.out.println("Class Name:" + getClass().getSimpleName());
-        return "the car is accelerating";
     }
-     public  String brake() {
-         System.out.println("Class Name:" + getClass().getSimpleName());
-        return "the car is braking";
-
-     }
 
     public int getCylinders() {
         return cylinders;
@@ -38,6 +42,11 @@ public class Car {
     public String getName() {
         return name;
     }
+
+
+
+
+
 
 
 
@@ -53,12 +62,13 @@ public class Car {
     public int hashCode() {
         return  Objects.hash(name, cylinders);
     }
+
     @Override
-    public String toString(){
+    public String toString() {
         return "Car{" +
-                "engine=" + engine +
+                "name='" + name + '\'' +
                 ", cylinders=" + cylinders +
-                ", name='" + name + '\'' +
+                ", engine=" + engine +
                 ", wheels=" + wheels +
                 '}';
     }

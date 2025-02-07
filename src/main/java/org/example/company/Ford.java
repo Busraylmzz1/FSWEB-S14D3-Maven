@@ -6,8 +6,8 @@ public class Ford extends Car {
         super(cylinders,name);
     }
     @Override
-    public String startEngine() {
-        return getName() + " engine is starting!";
+    public String accelerate() {
+        return getName() + "is accelerating!";
     }
 
     @Override
@@ -16,7 +16,7 @@ public class Ford extends Car {
     }
 
     @Override
-    public String accelerate() {
-        return getName() + "is accelerating!";
+    public String startEngine() {
+        return getName() + " engine is starting!";
     }
 }
