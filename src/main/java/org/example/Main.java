@@ -33,11 +33,11 @@ public class Main {
 
         Car holden = new Holden(6, "Holden Commodore");
 
-        System.out.println(holden.startEngine());
-
-        System.out.println(holden.accelerate());
-
-        System.out.println(holden.brake());
+//        System.out.println(holden.startEngine());
+//
+//        System.out.println(holden.accelerate());
+//
+//        System.out.println(holden.brake());
 
     }
 }
