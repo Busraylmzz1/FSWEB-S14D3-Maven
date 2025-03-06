@@ -2,9 +2,10 @@ package org.example.arge;
 
 public class CarFactory {
     public static void main(String[] args) {
-        CarSkeleton electricCar= new ElectricCar(10.5, 7);
-        CarSkeleton hybridCar = new HybridCar(40.3, 4,1);
-        CarSkeleton gasPoweredCar = new GasPoweredCar(20.3,6);
+        CarSkeleton electricCar= new ElectricCar("tesla", "tesla desc", 5,6);
+        CarSkeleton hybridCar = new HybridCar("ford","ford test",8,5,6);
+        CarSkeleton gasPoweredCar = new GasPoweredCar("BMW","BMW TEST",7,9);
+
 
     }
 
